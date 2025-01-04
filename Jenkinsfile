@@ -36,25 +36,11 @@ pipeline
 				sh 'mvn test'
 			}			
 		}
-		stage('Pre-Build Stage')
-		{
-			steps
-			{
-				echo 'This is Pre-Build Stage'
-			}			
-		}
 		stage('Build Stage')
 		{
 			steps
 			{
 				sh 'mvn install'
-			}			
-		}
-		stage('Post-Build Stage')
-		{
-			steps
-			{
-				echo 'This is Post Build Stage'
 			}			
 		}
 		stage('Java Version Check Stage')
